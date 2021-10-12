@@ -16,8 +16,8 @@ document.querySelector('.b-1').onclick = f1;
 // Task 2
 // Даны две переменные a21 и a22. При нажатии кнопки b-2, запускается функция f2. Функция должна сравнить переменные с помощью if else и вывести в out-2 число, которое больше. Вариант равенства переменных не рассматриваем.
 
-let a21 = 30;
-let a22 = 32;
+let a21 = 33;
+let a22 = 30;
 
 let output2 = document.querySelector('.out-2');
 
@@ -34,7 +34,7 @@ document.querySelector('.b-2').onclick = f2;
 
 
 // Task 3
-// Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция f3. Функция должна вычитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в  out-3 большее число.
+// Даны два input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция f3. Функция должна вычитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в  out-3 большее число.
 //     Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.
 
 let inp31 = document.querySelector('.i-31');
@@ -224,6 +224,7 @@ document.querySelector('.b-12').onclick = f12;
 
 // Task 13
 // Дан input i-130. В отличие от предыдущего задания - input type number. По нажатию кнопки получите значение из input  в переменную, а затем выведите в out-13 typeof полученной переменной. Typeof позволяет определить тип данных. Если вы правильно все сделали - то удивительно, но тип данных будет string! Подумайте почему так?
+// javascript.ru/forum/misc/67075-type%3D%27number%27-typeof-vydaet-%27string%27.html
 
 let inp13 = document.querySelector('.i-130');
 
@@ -253,7 +254,9 @@ function f14() {
     console.log(num1);
     let num2 = parseInt(inp142.value);
     console.log(num2);
+    console.log(operat);
     console.log(typeof operat);
+
     if (operat === '+') {
         document.querySelector('.out-14').innerHTML = num1 + num2;
 
