@@ -2,8 +2,9 @@
 // Кнопка b-1 запускает функцию t1. Функция должна выводить в out-1 строку вида:
 //     1 2 3 4 5 6 7 8 9 ... 49 50
 // от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла.
-let out1 = '';
+
 function t1() {
+  let out1 = '';
   for (let i = 0; i < 51; i++) {
     out1 += i + ' ';
   }
@@ -32,8 +33,9 @@ document.querySelector('.b-2').onclick = t2;
 // Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
 //     25 24 23 22 . . 7
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла.
-let out3 = '';
+
 function t3() {
+  let out3 = '';
   for (let i = 25; i > 6; i--) {
     out3 += i + ' ';
   }
@@ -47,8 +49,9 @@ document.querySelector('.b-3').onclick = t3;
 //     77_74_71_68_65_62_ ... _38_35_
 // от 77 до 35 c шагом 3. Разделитель - знак подчеркивания. Задача решается с помощью цикла.
 
-let out4 = '';
+
 function t4() {
+  let out4 = '';
   for (let i = 77; i > 34; i--) {
     out4 += i + '_';
   }
@@ -62,8 +65,9 @@ document.querySelector('.b-4').onclick = t4;
 // Кнопка b-5 запускает функцию t5. Функция должна выводить в out-5 строку вида:
 //     1_*2_**3_*4_** ... 17_*
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
-let out5 = '';
+
 function t5() {
+  let out5 = '';
   for (let i = 1; i < 18; i++) {
     if ((i % 2) == 0) {
       out5 += i + '_**';
@@ -89,10 +93,11 @@ document.querySelector('.b-5').onclick = t5;
 let input6 = document.querySelector('.i-6');
 // let peremen6 = parseInt(input6.value);
 
-let out6 = '';
+
 let peremen6 = parseInt(input6.value);
 function t6() {
-    peremen6 = parseInt(input6.value);
+  let out6 = '';
+  peremen6 = parseInt(input6.value);
   for (let i = 0; i < peremen6; i++) {
     out6 += '******<br>';
   }
@@ -111,8 +116,15 @@ document.querySelector('.b-6').onclick = t6;
 //     4 3 2 1 0
 // Задача решается с помощью цикла.
 
-function t7() {
+let input7 = document.querySelector('.i-7');
 
+function t7() {
+  let out7 = '';
+  let peremen7 = parseInt(input7.value);
+  for (let i = peremen7; i > -1; i--) {
+    out7 += i + ' ';
+  }
+  document.querySelector('.out-7').innerHTML = out7;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -126,8 +138,19 @@ document.querySelector('.b-7').onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла.
 
-function t8() {
 
+let input81 = document.querySelector('.i-81');
+let input82 = document.querySelector('.i-82');
+
+
+function t8() {
+  let out8 = '';
+  let valInp81 = parseInt(input81.value);
+  let valInp82 = parseInt(input82.value);
+  for (let i = valInp81; i <= valInp82; i = i + 1) {
+    out8 += i + ' ';
+  }
+  document.querySelector('.out-8').innerHTML = out8;
 }
 
 document.querySelector('.b-8').onclick = t8;
