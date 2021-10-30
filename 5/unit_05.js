@@ -142,7 +142,6 @@ document.querySelector('.b-7').onclick = t7;
 let input81 = document.querySelector('.i-81');
 let input82 = document.querySelector('.i-82');
 
-
 function t8() {
   let out8 = '';
   let valInp81 = parseInt(input81.value);
@@ -165,11 +164,46 @@ document.querySelector('.b-8').onclick = t8;
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
 // цикл - один
+// ---------------------------------------------------
+// let input91 = document.querySelector('.i-91');
+// let input92 = document.querySelector('.i-92');
+// // задачу помог решиь александр.
+// function t9() {
+//   let valueMax = parseInt(input91.value)
+//   let valueMin = parseInt(input92.value)
+//   if (valueMin > valueMax) {
+//     let temp = valueMin
+//     valueMin = valueMax
+//     valueMax = temp
+//   }
+//   let out9 = '';
+//   for (let i = valueMin; i <= valueMax; i = i + 1) {
+//     out9 += i + ' ';
+//   }
+//   document.querySelector('.out-9').innerHTML = out9;
+// }
+// -----------------------------------------------------
 
+let input91 = document.querySelector('.i-91');
+let input92 = document.querySelector('.i-92');
 function t9() {
-
+  let valInput91 = parseInt(input91.value);
+  let valInput92 = parseInt(input92.value);
+  // let valueMax
+  // let valueMin
+  let out9 = '';
+  if (valInput91 > valInput92) {
+    valueMax = valInput91;
+    valueMin = valInput92;
+  } else {
+    valueMax = valInput92;
+    valueMin = valInput91;
+  }
+  for (let i = valueMin; i <= valueMax; i = i + 1) {
+    out9 += i + ' ';
+  }
+  document.querySelector('.out-9').innerHTML = out9;
 }
-
 document.querySelector('.b-9').onclick = t9;
 
 
@@ -178,7 +212,11 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+  let out10 = '';
+  for (let i = 1950; i < 2002; i = i + 2) {
+    out10 += i + ' ';
+  }
+  document.querySelector('.out-10').innerHTML = out10;
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -190,10 +228,17 @@ document.querySelector('.b-10').onclick = t10;
 // вывести в out-11 содержимое каждого блока. Разделитель - пробел.
 //     В результате должно получиться так:
 //     one 3 4 two
+// автор курса не дал понять, как вывести на страницу содержание блока div. В итоге нагуглил "".textContent"
 
-
+let div11Container = document.querySelectorAll('.div-11')
+let outtest = document.querySelector('.div-1211')
 function t11() {
 
+  let out = '';
+  for (let i = 0; i < div11Container.length; i = i + 1) {
+    out += div11Container[i].textContent + ' '
+  }
+  document.querySelector('.out-11').innerHTML = out
 }
 
 document.querySelector('.b-11').onclick = t11;
