@@ -249,8 +249,11 @@ document.querySelector('.b-11').onclick = t11;
 // перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-
+let divContainer12 = document.getElementsByClassName('div-12');
 function t12() {
+  for (let i = 0; i < divContainer12.length; i++) {
+    divContainer12[i].style.background = 'orange'
+  }
 
 }
 
@@ -262,7 +265,11 @@ document.querySelector('.b-12').onclick = t12;
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
+let allInput13 = document.getElementsByClassName('i-13');
 function t13() {
+  for (let i = 0; i < allInput13.length; i++) {
+    allInput13[i].value = i + 1
+  }
 
 }
 
@@ -270,12 +277,18 @@ document.querySelector('.b-13').onclick = t13;
 
 //  Task 14
 // Кнопка b-14 запускает функцию t14  Функция должна:
-//     получить все input.i-14
+// получить все input.i-14
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-
+let allInput14 = document.getElementsByClassName('i-14');
 function t14() {
+  for (let i = 0; i < allInput14.length; i++) {
+    if (allInput14[i].checked) {
+      document.querySelector('.out-14').innerHTML = allInput14[i].value;
+    }
+  }
+  // console.log(allInput14)
 
 }
 
@@ -288,7 +301,12 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + ' ' + i
 
 function t15() {
-
+  let out = ' '
+  for (let i = 0; i <= 10; i++) {
+    out += (10 - i) + ' ' + i + ' ';
+    // console.log(i);
+  }
+  document.querySelector('.out-15').innerHTML = out
 }
 
 document.querySelector('.b-15').onclick = t15;
