@@ -5,7 +5,7 @@
 
 function t1() {
   let out1 = '';
-  for (let i = 0; i < 51; i++) {
+  for (let i = 1; i < 51; i++) {
     out1 += i + ' ';
   }
   document.querySelector('.out-1').innerHTML = out1;
@@ -229,6 +229,7 @@ document.querySelector('.b-10').onclick = t10;
 //     В результате должно получиться так:
 //     one 3 4 two
 // автор курса не дал понять, как вывести на страницу содержание блока div. В итоге нагуглил "".textContent"
+// https://itchief.ru/javascript/textcontent вот отличте innertext от textContent
 
 let div11Container = document.querySelectorAll('.div-11')
 let outtest = document.querySelector('.div-1211')
@@ -236,7 +237,7 @@ function t11() {
 
   let out = '';
   for (let i = 0; i < div11Container.length; i = i + 1) {
-    out += div11Container[i].textContent + ' '
+    out += div11Container[i].innerText + ' '
   }
   document.querySelector('.out-11').innerHTML = out
 }
