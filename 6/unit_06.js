@@ -39,7 +39,7 @@ function t2() {
             out += '*_';
         }
         if (i == 3) continue;
-        out += '<br>' + (i + 1) + '<br>';
+        out += `<br>${i + 1}<br>`;
     }
     document.querySelector('.out-2').innerHTML = out;
 }
@@ -57,7 +57,15 @@ document.querySelector('.b-2').onclick = t2;
 // </pre>
 // <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит перенос строки br,  внутренний -  звездочки, знак подчеркивания.</p>
 function t3() {
+    let out = ''
+    for (let i = 0; i < 4; i++) {
+        for (let k = 0; k < 3; k++) {
+            out += '*_';
+        }
 
+        out += `<br>`;
+    }
+    document.querySelector('.out-3').innerHTML = out;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -68,7 +76,16 @@ document.querySelector('.b-3').onclick = t3;
 // 1_1 2 3 4 5 2_1 2 3 4 5 3_1 2 3 4 5
 // </pre>
 function t4() {
-
+    let out = ''
+    for (let i = 1; i < 5; i++) {
+        for (let k = 1; k <= 5; k++) {
+            if (i == 1) continue;
+            out += `${k} `;
+        }
+        if (i == 4) continue;
+        out += `${i}_`;
+    }
+    document.querySelector('.out-4').innerHTML = out;
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -83,7 +100,19 @@ document.querySelector('.b-4').onclick = t4;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1.</p>
 function t5() {
-
+    let out = ''
+    for (let i = 0; i <= 2; i++) {
+        for (let k = 0; k <= 6; k++) {
+            if ((k % 2) == 0) {
+                if (k == 0) continue;
+                out += '0';
+            } else {
+                out += '1';
+            }
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-5').innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -98,6 +127,25 @@ document.querySelector('.b-5').onclick = t5;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1 либо х.</p>
 function t6() {
+    let out = ''
+    for (let i = 0; i <= 2; i++) {
+        for (let k = 0; k <= 6; k++) {
+            if ((k % 3) == 0) {
+                if (k == 0) continue;
+                out += 'x';
+            }
+            else {
+                if ((k % 2) == 0) {
+                    out += '0';
+                }
+                else {
+                    out += '1';
+                }
+            }
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-6').innerHTML = out;
 
 }
 
