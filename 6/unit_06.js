@@ -162,7 +162,15 @@ document.querySelector('.b-6').onclick = t6;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл запускается от нуля до i и рисует звездочку.</p>
 function t7() {
-
+    let out = document.querySelector('.out-7')
+    let a = ''
+    for (let k = 0; k < 4; k++) {
+        for (let i = 0; i <= k; i++) {
+            a += '*';
+        }
+        a += '<br>';
+    }
+    out.innerHTML = a
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -179,7 +187,15 @@ document.querySelector('.b-7').onclick = t7;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
 function t8() {
-
+    let out = document.querySelector('.out-8')
+    let a = ''
+    for (let i = 0; i < 5; i++) {
+        for (let k = 5; k > i; k--) {
+            a += '*';
+        }
+        a += '<br>';
+    }
+    out.innerHTML = a
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -196,7 +212,15 @@ document.querySelector('.b-8').onclick = t8;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
 function t9() {
-
+    let out = document.querySelector('.out-9');
+    let a = '';
+    for (let k = 1; k < 6; k++) {
+        for (let i = 1; i <= k; i++) {
+            a += `${i}` + ' '
+        }
+        a += '<br>';
+    }
+    out.innerHTML = a
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -214,6 +238,38 @@ document.querySelector('.b-9').onclick = t9;
 // <p>Внешний цикл выводит перенос строки br и запускается от 0 до 6.</p>
 // <p>Вложенный цикл рисует цифры от 0 до 9. Обратите внимание, что первый ряд - есть ведущий нуль. Здесь все просто - проверили, если число меньше 10 - то конкатенируем нуль.</p>
 function t10() {
+    // let out = document.querySelector('.out-10');
+    // let a = '';
+    // for (let k = 0; k < 6; k++) {
+    //     for (let i = 0; i <= 9; i++) {
+    //         if (i == 0) continue;
+    //         if (k == 5) continue;
+    //         a += `${k}` + i + ' ';
+    //     }
+    //     if (k == 5) continue;
+    //     a += `${k + 1}` + '0' + '<br>';
+    // }
+    // out.innerHTML = a;
+
+    // let out = document.querySelector('.out-10');
+    // let a = '';
+    // for (let k = 0; k < 6; k++) {
+    //     for (let i = 0; i <= 10; i++) {
+    //         if (i < 10) {
+    //             if (i == 0) continue;
+    //             if (k == 5) continue;
+    //             a += `${k}` + i + ' ';
+    //         }
+    //         else {
+    //             if (k == 5) continue;
+    //             a += `${k + 1}` + '0'
+    //         }
+    //     }
+    //     a += '<br>';
+    // }
+    // out.innerHTML = a;
+
+
 
 }
 
