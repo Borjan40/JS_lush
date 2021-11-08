@@ -102,12 +102,12 @@ document.querySelector('.b-4').onclick = t4;
 function t5() {
     let out = ''
     for (let i = 0; i <= 2; i++) {
-        for (let k = 0; k <= 6; k++) {
+        for (let k = 0; k <= 5; k++) {
             if ((k % 2) == 0) {
-                if (k == 0) continue;
-                out += '0';
-            } else {
+                // if (k == 0) continue; это если внутренний выводит if 0, else 1
                 out += '1';
+            } else {
+                out += '0';
             }
         }
         out += '<br>';
@@ -127,20 +127,37 @@ document.querySelector('.b-5').onclick = t5;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1 либо х.</p>
 function t6() {
+
     let out = ''
+
+    // for (let i = 0; i <= 2; i++) {
+    //     for (let k = 0; k <= 6; k++) {
+    //         if ((k % 3) == 0) {
+    //             if (k == 0) continue;
+    //             out += 'x';
+    //         }
+    //         else {
+    //             if ((k % 2) == 0) {
+    //                 out += '0';
+    //             }
+    //             else {
+    //                 out += '1';
+    //             }
+    //         }
+    //     }
+    //     out += '<br>';
+    // }
+
     for (let i = 0; i <= 2; i++) {
-        for (let k = 0; k <= 6; k++) {
-            if ((k % 3) == 0) {
-                if (k == 0) continue;
+        for (let k = 0; k <= 5; k++) {
+            if (k == 2 || k == 5) {
                 out += 'x';
             }
+            else if ((k % 2) == 0) {
+                out += '1';
+            }
             else {
-                if ((k % 2) == 0) {
-                    out += '0';
-                }
-                else {
-                    out += '1';
-                }
+                out += '0';
             }
         }
         out += '<br>';
@@ -162,16 +179,19 @@ document.querySelector('.b-6').onclick = t6;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл запускается от нуля до i и рисует звездочку.</p>
 function t7() {
-    let out = document.querySelector('.out-7')
-    let a = ''
+
+    let out = ''
     for (let k = 0; k < 4; k++) {
         for (let i = 0; i <= k; i++) {
-            a += '*';
+            out += '*';
         }
-        a += '<br>';
+        out += '<br>';
     }
-    out.innerHTML = a
+    document.querySelector('.out-7').innerHTML = out;
 }
+
+
+
 
 document.querySelector('.b-7').onclick = t7;
 
@@ -187,6 +207,7 @@ document.querySelector('.b-7').onclick = t7;
 // </pre>
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
 function t8() {
+
     let out = document.querySelector('.out-8')
     let a = ''
     for (let i = 0; i < 5; i++) {
@@ -197,7 +218,6 @@ function t8() {
     }
     out.innerHTML = a
 }
-
 document.querySelector('.b-8').onclick = t8;
 
 
@@ -274,3 +294,46 @@ function t10() {
 }
 
 document.querySelector('.b-10').onclick = t10;
+
+function t11() {
+    out = '';
+    for (let i = 0; i < 3; i++) {
+        for (k = 0; k < 3 - i; k++) {
+            out += '&nbsp;';
+        }
+        for (let k = 0; k < 5; k++) {
+            out += `* `;
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-11').innerHTML = out;
+}
+
+document.querySelector('.b-11').onclick = t11;
+
+function t12() {
+
+    out = '';
+    for (let i = 0; i <= 4; i++) {
+        if (i >= 0 && i < 3) {
+            for (let k = 0; k <= i; k++) {
+                out += '*';
+            }
+            for (let k = 0; k < 3 - i; k++) {
+                out += '&nbsp;';
+            }
+        } else {
+            for (let k = 5; k > i; k--) {
+                out += '*';
+            }
+            for (let k = 0; k < i - 1; k++) {
+                out += '&nbsp;';
+            }
+        }
+        out += '<br>';
+    }
+    document.querySelector('.out-12').innerHTML = out;
+
+}
+
+document.querySelector('.b-12').onclick = t12;
