@@ -191,8 +191,6 @@ function t7() {
 }
 
 
-
-
 document.querySelector('.b-7').onclick = t7;
 
 
@@ -234,9 +232,9 @@ document.querySelector('.b-8').onclick = t8;
 function t9() {
     let out = document.querySelector('.out-9');
     let a = '';
-    for (let k = 1; k < 6; k++) {
+    for (let k = 0; k < 6; k++) {
         for (let i = 1; i <= k; i++) {
-            a += `${i}` + ' '
+            a += `${i + 1}` + ' '
         }
         a += '<br>';
     }
@@ -337,3 +335,81 @@ function t12() {
 }
 
 document.querySelector('.b-12').onclick = t12;
+
+
+let inputContainer = document.getElementsByTagName('input');
+
+
+function t14() {
+    for (let z = 1; z < inputContainer.length; z++) {
+        let a = parseInt(inputContainer[0].value);
+        let b = parseInt(inputContainer[1].value);
+        out = '';
+        for (let i = 0; i <= a - 1; i++) {
+            if (i == 0 || i == a - 1) {
+                for (let k = 0; k <= b * 2; k++) {
+                    if ((k % 2) == 0) {
+                        if (k == 0) continue;
+                        out += '&nbsp;';
+                    }
+                    else {
+                        out += '*';
+                    }
+                }
+            }
+            else {
+                for (let k = 0; k <= b * 2; k++) {
+                    if (k == 0 || k == b * 2) {
+                        out += '*';
+                    }
+                    else {
+                        // if (k == 1) continue;
+                        out += '&nbsp;';
+                    }
+                }
+            }
+
+            out += '<br>';
+        }
+    }
+
+    document.querySelector('.out-14').innerHTML = out;
+}
+
+document.querySelector('.b-14').onclick = t14;
+
+function t15() {
+    let out = document.querySelector('.out-15');
+
+    for (let i = 0; i < 5; i++) {
+
+        let count = i + 1;
+
+        for (let k = 5; k > 0; k--) {
+            if (k > count) {
+                out.innerHTML += `X `;
+            } else {
+                out.innerHTML += `${k} `;
+            }
+        }
+
+        out.innerHTML += '<br>';
+    }
+}
+
+document.querySelector('.b-15').onclick = t15;
+
+
+
+function t16() {
+    let out = document.querySelector('.out-16');
+    for (let i = 5; i >= 1; i--) {
+        let t = ''
+        for (let k = 5; k >= i; k--) {
+            t += i;
+        }
+        out.innerHTML += t + '<br>';
+    }
+}
+document.querySelector('.b-16').onclick = t16;
+;
