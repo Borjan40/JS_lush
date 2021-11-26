@@ -107,13 +107,14 @@ function f8() {
 
 document.querySelector('.b-8').onclick = f8;
 
+console.log('parent')
 
 //  Task 9
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 function f9() {
     this.classList.add('bg-9');
-    // console.log(this)
+    console.log(this)
 }
 
 let div9 = document.querySelectorAll('.out-9');
@@ -152,6 +153,8 @@ function f11() {
     temp.classList.add('bg-12')
 
     document.querySelector('.out-11').appendChild(temp);
+
+    
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -185,7 +188,12 @@ document.querySelector('.b-13').onclick = f13;
 
 
 function f14() {
+    // let temp = document.createElement('div');
+    // temp.innerHTML = '14';
+    // temp.classList.add('bg-14')
 
+    // let parent = getElementsByClassName('out-14')
+    console.log('parent')
 }
 
 document.querySelector('.b-14').onclick = f14;
