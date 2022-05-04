@@ -1,0 +1,21 @@
+a {
+    display: block;
+    margin: 10px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 550px;
+    flex-wrap: wrap;
+}
+
+.list a {
+    width: fit-content;
+    font-size: 15px;
+}
+
+.height-cont {
+    height: 200px;
+}
