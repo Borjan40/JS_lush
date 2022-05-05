@@ -269,23 +269,23 @@ function t10() {
     // }
     // out.innerHTML = a;
 
-    // let out = document.querySelector('.out-10');
-    // let a = '';
-    // for (let k = 0; k < 6; k++) {
-    //     for (let i = 0; i <= 10; i++) {
-    //         if (i < 10) {
-    //             if (i == 0) continue;
-    //             if (k == 5) continue;
-    //             a += `${k}` + i + ' ';
-    //         }
-    //         else {
-    //             if (k == 5) continue;
-    //             a += `${k + 1}` + '0'
-    //         }
-    //     }
-    //     a += '<br>';
-    // }
-    // out.innerHTML = a;
+    let out = document.querySelector('.out-10');
+    let a = '';
+    for (let k = 0; k < 6; k++) {
+        for (let i = 0; i <= 10; i++) {
+            if (i < 10) {
+                if (i == 0) continue;
+                if (k == 5) continue;
+                a += `${k}` + i + ' ';
+            }
+            else {
+                if (k == 5) continue;
+                a += `${k + 1}` + '0'
+            }
+        }
+        a += '<br>';
+    }
+    out.innerHTML = a;
 
 
 

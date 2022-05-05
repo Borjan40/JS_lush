@@ -57,9 +57,9 @@ button8.onclick = function () {
 
 // task 10
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь умноженное на 10.
-let inputIn10 = document.querySelector('.inputIn-t10');
-let button10 = document.querySelector('.button-t10');
-let out10 = document.querySelector('.output10');
+let inputIn10 = document.querySelector('.i-10');
+let button10 = document.querySelector('.b-10');
+let out10 = document.querySelector('.out-10');
 
 button10.onclick = function () {
     let outPutCons10 = inputIn10.value;
@@ -69,9 +69,9 @@ button10.onclick = function () {
 
 // task 11
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу в .out-11 число, которое ввел пользователь и к нему добавленное число 10.
-let inputIn11 = document.querySelector('.inputIn-t11');
-let button11 = document.querySelector('.button-t11');
-let out11 = document.querySelector('.output11');
+let inputIn11 = document.querySelector('.i-11');
+let button11 = document.querySelector('.b-11');
+let out11 = document.querySelector('.out-11');
 
 button11.onclick = function () {
     let outPutCons11 = +inputIn11.value;
@@ -80,9 +80,9 @@ button11.onclick = function () {
 
 // task 12
 // Создайте два input (i-12_1 и i-12-2) и кнопку. В первый input пользователь вводит имя, во второе фамилию. При нажатии кнопки выполняется функция, которая выводит в .out-12 строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия.
-let inputIn12_1 = document.querySelector('.inputIn-t12-1');
-let inputIn12_2 = document.querySelector('.inputIn-t12-2');
-let button12 = document.querySelector('.button-t12');
+let inputIn12_1 = document.querySelector('.i-12_1');
+let inputIn12_2 = document.querySelector('.i-12_2');
+let button12 = document.querySelector('.b-12');
 let out12 = document.querySelector('.out-12');
 
 button12.onclick = function () {
@@ -93,9 +93,9 @@ button12.onclick = function () {
 
 // task 13
 // Создайте два input и кнопку. В input пользователь вводит числа. При нажатии кнопки выполняется функция, которая выводит сумму данных двух чисел на страницу в .out-13
-let inputIn13_1 = document.querySelector('.inputIn-t13-1');
-let inputIn13_2 = document.querySelector('.inputIn-t13-2');
-let button13 = document.querySelector('.button-t13');
+let inputIn13_1 = document.querySelector('.i-13_1');
+let inputIn13_2 = document.querySelector('.i-13_2');
+let button13 = document.querySelector('.b-13');
 let out13 = document.querySelector('.out-13');
 
 button13.onclick = function () {
@@ -106,20 +106,21 @@ button13.onclick = function () {
 
 // task 14
 // Создайте input .i-14 и пропишите ему в html value = 77. С помощью JS измените value на 'Hello'.
-let newVal = document.querySelector('.input14');
-console.log(newVal);
+let newVal = document.querySelector('.i-14');
+console.log(newVal.value);
 newVal.value = 'hello';
+console.log(newVal.value);
 
 // task 15 
 // Создайте input i-15 и получите его в переменную y. В js выполните следующее присвоение: y.style.border = '2px solid red' . Изучите результат операции.
-let y = document.querySelector('.input15');
+let y = document.querySelector('.i-15');
 y.style.border = '3px solid red';
 
 // task 16
 // Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел по нажатию кнопки b-16.
-let inputIn16_1 = document.querySelector('.inputIn-t16-1');
-let inputIn16_2 = document.querySelector('.inputIn-t16-2');
-let button16 = document.querySelector('.button-t16');
+let inputIn16_1 = document.querySelector('.i-16-1');
+let inputIn16_2 = document.querySelector('.i-16-2');
+let button16 = document.querySelector('.b-16');
 let output16 = document.querySelector('.out-16');
 
 button16.onclick = function () {
@@ -130,8 +131,8 @@ button16.onclick = function () {
 
 // task 17
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в out-17. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
-let in17 = document.querySelector('.inputIn17');
-let button17 = document.querySelector('.button-t17');
+let in17 = document.querySelector('.i-17');
+let button17 = document.querySelector('.b-17');
 let output17 = document.querySelector('.out-17');
 
 button17.onclick = function () {
@@ -143,20 +144,21 @@ button17.onclick = function () {
 
 // task 18
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
-let in18 = document.querySelector('.inputIn18');
-let button18 = document.querySelector('.button-t18');
+let in18 = document.querySelector('.i-18');
+let button18 = document.querySelector('.b-18');
 
 button18.onclick = function () {
     let t = in18.value;
     t = parseFloat(t);
+    console.log(typeof (t));
     console.log(t);
 }
 
 // task 19
 // Создайте два input type=number, куда пользователь может ввести отрицательные числа. Выведите на страницу сумму данных чисел. Мы это делали! Зачем? Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!
-let input19_1 = document.querySelector('.inputIn19_1');
-let input19_2 = document.querySelector('.inputIn19_2');
-let button19 = document.querySelector('.button-t19');
+let input19_1 = document.querySelector('.i-19-1');
+let input19_2 = document.querySelector('.i-19-2');
+let button19 = document.querySelector('.b-19');
 let outSumm = document.querySelector('.out-19');
 
 button19.onclick = function () {
@@ -173,7 +175,7 @@ let inpFirstName = document.querySelector('.FirstName_20t');
 let inpLastName = document.querySelector('.LastName_20t');
 let inpAge = document.querySelector('.Age_20t');
 let inpJob = document.querySelector('.Job_20t');
-let button20 = document.querySelector('.button-t20');
+let button20 = document.querySelector('.b-20');
 let outInf = document.querySelector('.out-20');
 
 button20.onclick = function () {
@@ -183,5 +185,7 @@ button20.onclick = function () {
     let valAge = inpAge.value;
     let jobTitle = inpJob.value;
 
-    outInf.innerHTML = 'Dear ' + valFirstName + spTxt + valLastName + ' your age is ' + valAge + ' years ' + ' ,your profession is a ' + jobTitle + '.';
+    // outInf.innerHTML = 'Dear ' + valFirstName + spTxt + valLastName + ' your age is ' + valAge + ' years ' + ' ,your profession is a ' + jobTitle + '.';
+
+    outInf.innerHTML = `Dear ${valFirstName + spTxt + valLastName}` + ' your age is ' + valAge + ' years ' + ' ,your profession is a ' + jobTitle + '.';
 }

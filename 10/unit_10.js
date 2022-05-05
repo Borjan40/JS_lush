@@ -52,8 +52,13 @@ document.querySelector('.b-3').onclick = f3;
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
 // let ar4 =  // переменную обьявляем эту здесь!!!!
-let ar4 = []
+let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sortArr = [];
 function f4() {
+    const indexes = [0, 3, 8];
+    sortArr = ar4.filter((item, index) => indexes.includes(index));
+    console.log(sortArr)
+    document.querySelector('.out-4').innerHTML = sortArr;
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -69,7 +74,6 @@ document.querySelector('.b-4').onclick = f4;
 let ar5 = [1, 2, 3, 4, 5, 5]
 function f5() {
     sum = ar5[0] + ar5[2] + ar5[ar5.length - 3];
-
     document.querySelector('.out-5').innerHTML = sum;
 }
 
@@ -187,9 +191,22 @@ document.querySelector('.b-11').onclick = f11;
 // Вывод в out-12
 
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
-
+const firstIndex = 0;
+const lastIndex = ar12.length - 1
+let sortArr12 = [];
 function f12() {
-
+    for (let i = 0; i < ar12.length; i++) {
+        if (i == firstIndex) {
+            sortArr12[lastIndex] = ar12[i]
+        }
+        else if (i == lastIndex) {
+            sortArr12[firstIndex] = ar12[i]
+        }
+        else {
+            sortArr12[i] = ar12[i]
+        }
+    }
+    document.querySelector('.out-12').innerHTML = sortArr12
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -227,11 +244,11 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-    // out = ''
-    // for (i = ar14.length - 1; i >= 0; i--) {
-    //     out += ar14[i] + ' ';
-    // }
-    // document.querySelector('.out-14').innerHTML = out
+    out = ''
+    for (i = ar14.length - 1; i >= 0; i--) {
+        out += ar14[i] + ' ';
+    }
+    document.querySelector('.out-14').innerHTML = out
 }
 
 document.querySelector('.b-14').onclick = f14;

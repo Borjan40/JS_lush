@@ -60,7 +60,7 @@ function f5() {
         output5.innerHTML = myCheckBox.value;
     }
     else {
-        output5.innerHTML = 'false';
+        output5.innerHTML = myCheckBox.checked;
     }
 
 }
@@ -91,13 +91,10 @@ function f7() {
     console.log(myInput.length);
 
     if (myInput.length >= 6) {
-
         output72.innerHTML = '1'
 
     } else {
-
         output72.innerHTML = '0'
-
     }
 
 }
@@ -125,16 +122,10 @@ function f8() {
     // console.log(inp_81);
     // out_81.innerHTML = inp_81.value;
     function f81() {
-
         out_81.innerHTML = inp_81.value;
-
     }
     document.querySelector('.b-81').onclick = f81;
 }
-
-
-
-
 // console.log(butt_81);
 // console.log(inp_81);
 document.querySelector('.b-8').onclick = f8;
@@ -163,9 +154,8 @@ document.querySelector('.b-9').onclick = f9;
 
 // Task 10
 // >Создайте input(color).i-10 и button.b-10 - при нажатии на кнопку окрашивайте div.out-10 выбранным цветом (имеется ввиду .style.background = ).
-
-let colorOut9 = document.querySelector('.out-10')
-
+let colorOut9 = document.querySelector('.out-10');
+console.log(document.querySelector('.i-10').value)
 // console.log(colorOut9);
 function f10() {
     let colorOfinput = document.querySelector('.i-10').value // важно объявлять внутри функции, иначе цвет будет дефолтный черный
@@ -198,7 +188,8 @@ document.querySelector('.b-11').onclick = f11;
 
 function f12() {
 
-    document.querySelector('.out-12').innerHTML = document.querySelector('.i-12').value
+    document.querySelector('.out-12').innerHTML =
+        document.querySelector('.i-12').value
 
 }
 
@@ -209,7 +200,8 @@ document.querySelector('.b-12').onclick = f12;
 
 function f13() {
 
-    document.querySelector('.out-13').innerHTML = document.querySelector('.i-13').value
+    document.querySelector('.out-13').innerHTML =
+        document.querySelector('.i-13').value
 
 }
 
@@ -222,7 +214,8 @@ document.querySelector('.i-13').oninput = f13;
 
 function f14() {
 
-    document.querySelector('.out-14').innerHTML = document.querySelector('.t-14').value
+    document.querySelector('.out-14').innerHTML =
+        document.querySelector('.t-14').value
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -248,7 +241,8 @@ function f16() {
 
     // document.querySelector('.s-16').value = document.querySelector('.out-16').innerHTML
 
-    document.querySelector('.out-16').innerHTML = document.querySelector('.s-16').value
+    document.querySelector('.out-16').innerHTML =
+        document.querySelector('.s-16').value
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -258,7 +252,8 @@ document.querySelector('.b-16').onclick = f16;
 
 function f17() {
 
-    document.querySelector('.out-17').innerHTML = document.querySelector('.s-17').value
+    document.querySelector('.out-17').innerHTML =
+        document.querySelector('.s-17').value
 
 }
 
@@ -300,9 +295,8 @@ let input191 = form191.elements[0];
 let input192 = form191.elements[1];
 
 function f19() {
-
-    document.querySelector('.out-19').innerHTML = input191.value + ' ' + input192.value
-
+    document.querySelector('.out-19').innerHTML =
+        input191.value + ' ' + input192.value
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -323,6 +317,7 @@ function f20(e) {
     let passVal = form.elements['password'].value;
 
     document.querySelector('.out-20').innerHTML = userNameVal + ' ' + passVal;
+
 }
 
 document.querySelector('.b-20').onclick = f20;
